@@ -133,7 +133,7 @@
               <button class="w-full p-3 rounded-lg text-xs bg-lightPurple text-light mt-2 {isFormValid() ? 'bg-lightPurple text-light' : 'bg-backdrop text-muted cursor-not-allowed'}"
                 disabled={!isFormValid()}
                 on:click={sendEmail} >
-                Submit
+                Send
               </button>
             </div>
           </div>

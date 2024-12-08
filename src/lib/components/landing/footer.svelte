@@ -1,4 +1,4 @@
-<footer class="mb-2 bg-lightPurple p-6 flex flex-row rounded-2xl justify-between items-center">
+<footer class="mb-2 bg-lightPurple p-5 flex flex-row rounded-2xl justify-between items-center">
     
     <!-- copyright text -->
     <div class="flex flex-col gap-1">
@@ -28,10 +28,3 @@
     </div>
 
 </footer>
-
-<style>
-    button:hover {
-        box-shadow: 0 0 0 1px #DBD8E3, 0 0 0 4px rgba(255, 255, 255, 0); 
-        transition: box-shadow 0.2s ease;
-    }
-</style>
