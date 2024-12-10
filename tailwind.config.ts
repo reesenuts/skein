@@ -20,7 +20,14 @@ export default {
 
         // extra
         muted: "#686868",
-        backdrop: "#E2E2E2"
+        backdrop: "#E2E2E2",
+
+        // main color palette for shop
+        one: "#A7AEC1",
+        two: "#C5C8D2",
+        three: "#F5F5F5",
+        four: "#FBFBFD",
+
       }
     }
   },

@@ -69,22 +69,22 @@
   </script>
 
 <section class="h-[70vh] flex justify-center items-center overflow-y-auto">
-    <form class="bg-darkPurple/95 w-3/5 p-16 rounded-3xl backdrop-bg-blur flex items-center justify-between gap-12">
+    <form class="bg-purple w-3/5 p-16 rounded-3xl backdrop-bg-blur flex items-center justify-between gap-12">
         <div class="w-full">
             <h1 class="text-4xl font-bold text-light mb-6">✦ Contact Form</h1>
             <div class="flex flex-col gap-4">
               <!-- full name -->
               <div class="w-full flex flex-col gap-1">
                 <div class="flex gap-2 items-center">
-                    <p class="text-sm font-semibold text-light">Name</p>
+                    <p class="text-sm font-medium text-light">Name</p>
                     {#if $errorMessage && (!firstName || !lastName)}
                     <p class="text-red-500 text-xs">Both first and last names are required.</p>
                     {/if}  
                 </div>
                 <div class="flex gap-2">
-                  <input class="w-full p-3 rounded-lg text-xs border border-purple bg-lightPurple/10 text-light focus:border-light focus:outline-none" type="text" placeholder="first name"
+                  <input class="w-full p-3 rounded-lg text-xs border border-purple bg-lightPurple/50 text-light focus:border-light focus:outline-none" type="text" placeholder="first name"
                     bind:value={firstName} />
-                  <input class="w-full p-3 rounded-lg text-xs border border-purple bg-lightPurple/10 text-light focus:border-light focus:outline-none" type="text" placeholder="last name"
+                  <input class="w-full p-3 rounded-lg text-xs border border-purple bg-lightPurple/50 text-light focus:border-light focus:outline-none" type="text" placeholder="last name"
                     bind:value={lastName} />
                 </div>
               </div>
@@ -92,19 +92,19 @@
               <!-- order number -->
               <div class="w-full flex flex-col gap-1">
                 <div class="flex gap-2 items-center">
-                    <p class="text-sm font-semibold text-light">Order Number</p>
+                    <p class="text-sm font-medium text-light">Order Number</p>
                     {#if $errorMessage && !orderNumber}
                     <p class="text-red-500 text-xs">Order number is required.</p>
                     {/if} 
                 </div>
-                <input class="w-full p-3 rounded-lg text-xs border border-purple bg-lightPurple/10 text-light focus:border-light focus:outline-none" type="text" placeholder="order number"
+                <input class="w-full p-3 rounded-lg text-xs border border-purple bg-lightPurple/50 text-light focus:border-light focus:outline-none" type="text" placeholder="order number"
                   bind:value={orderNumber} />
               </div>
           
               <!-- email -->
               <div class="w-full flex flex-col gap-1">
                 <div class="flex gap-2 items-center">
-                  <p class="text-sm font-semibold text-light">Email</p>
+                  <p class="text-sm font-medium text-light">Email</p>
                   {#if $errorMessage && !email}
                   <p class="text-red-500 text-xs">Email is required.</p>
                   {/if}
@@ -112,25 +112,25 @@
                     <p class="text-red-500 text-xs">Please enter a valid email address.</p>
                   {/if}
                 </div>
-                <input class="w-full p-3 rounded-lg text-xs border border-purple bg-lightPurple/10 text-light focus:border-light focus:outline-none" type="email" placeholder="your@email.com"
+                <input class="w-full p-3 rounded-lg text-xs border border-purple bg-lightPurple/50 text-light focus:border-light focus:outline-none" type="email" placeholder="your@email.com"
                   bind:value={email} />
               </div>
           
               <!-- message -->
               <div class="w-full flex flex-col gap-1">
                 <div class="flex gap-2 items-center">
-                  <p class="text-sm font-semibold text-light">Message</p>
+                  <p class="text-sm font-medium text-light">Message</p>
                   {#if $errorMessage && !message}
                   <p class="text-red-500 text-xs">Message is required.</p>
                   {/if}
                 </div>
-                <textarea class="w-full p-3 rounded-lg text-xs border border-purple bg-lightPurple/10 text-light focus:border-light focus:outline-none" placeholder="Type your message here"
+                <textarea class="w-full p-3 rounded-lg text-xs border border-purple bg-lightPurple/50 text-light focus:border-light focus:outline-none" placeholder="Type your message here"
                   bind:value={message} >
                 </textarea>
               </div>
           
               <!-- submit button -->
-              <button class="w-full p-3 rounded-lg text-xs bg-lightPurple text-light mt-2 {isFormValid() ? 'bg-lightPurple text-light' : 'bg-backdrop text-muted cursor-not-allowed'}"
+              <button class="w-full p-3 rounded-lg text-xs bg-lightPurple text-light mt-2 {isFormValid() ? 'bg-lightPurple text-light' : 'bg-backdrop text-light/50 cursor-not-allowed'}"
                 disabled={!isFormValid()}
                 on:click={sendEmail} >
                 Send

@@ -19,9 +19,9 @@
 <section id="faq">
     <div class="h-[70vh] flex justify-center items-center overflow-y-auto">
       <!-- questions -->
-      <div class="flex flex-col gap-2 p-2 items-center w-full text-lightPurple text-sm font-bold">
+      <div class="flex flex-col gap-2 p-2 items-center w-full text-light text-sm font-semibold">
         {#each faqItems as item, i}
-          <div class="bg-white/20 backdrop-blur-lg p-6 rounded-3xl w-[600px]">
+          <div class="bg-purple backdrop-blur-lg p-6 rounded-3xl w-[600px]">
             <div class="flex items-center justify-between">
               <h1>{item.question}</h1>
               <button aria-label="expand" on:click={() => toggleExpand(i)}>
