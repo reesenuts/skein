@@ -5,7 +5,11 @@ class Auth {
 
   public function __construct(\PDO $pdo) {
     $this->pdo = $pdo;
-    $this->encryptionKey = $_ENV['ENCRYPTION_KEY'];
+    $this->encryptionKey = $_ENV['ENCRYPTION_KEY'] ?? null;
+    
+    if (!$this->encryptionKey) {
+      throw new \Exception('ENCRYPTION_KEY not found in environment variables');
+    }
   }
 
   protected function checkPassword($pword, $hashPword) {
